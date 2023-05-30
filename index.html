@@ -101,9 +101,13 @@ let doc = document.getElementById("But")
 doc.addEventListener("click", ()=> {
     let name = document.getElementById("name").value;
     let email = document.getElementById("useremail").value;
+    let phone = document.getElementById("userphone").value;
+    let address = document.getElementById("useraddress").value;
     let data = {
         namefa: name,
-        email: email
+        email: email,
+        address:address,
+        phone:phone 
     }
     tg.sendData(JSON.stringify(data));
 
