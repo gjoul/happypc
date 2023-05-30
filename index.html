@@ -70,7 +70,7 @@
 
 
     <label for="name" >Имя:</label><br>
-    <input type="text" id="username" name="name"><br>
+    <input type="text" id="name" name="name"><br>
 
     <label for="email">Email:</label><br>
     <input type="email" id="useremail" name="email"><br>
@@ -99,21 +99,16 @@ let tg = window.Telegram.WebApp;
 let doc = document.getElementById("But")
 
 doc.addEventListener("click", ()=> {
-let name=document.getElementById("username").value;
-let email=document.getElementById("useremail").value;
-let phone=document.getElementById("userphone").value;
-let adress=document.getElementById("useradress").value;
+    let name = document.getElementById("name").value;
 
-let data = {
-    name: name,
-    email: email,
-    phone: phone,
-    adress: adress 
-}
-tg.sendData(JSON.stringify(data));
+    let data = {
+        name: name
+    }
+    tg.sendData(JSON.stringify(data));
 
-tg.close();
+    tg.close();
 })
+
 </script>
 
 
