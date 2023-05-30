@@ -69,17 +69,17 @@
 <h1>Оформление заказа</h1>
 
 
-    <label for="name">Имя:</label><br>
-    <input type="text" id="name" name="name"><br>
+    <label for="name" >Имя:</label><br>
+    <input type="text" id="username" name="name"><br>
 
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br>
+    <input type="email" id="useremail" name="email"><br>
 
     <label for="phone">Телефон:</label><br>
-    <input type="tel" id="phone" name="phone"><br>
+    <input type="tel" id="userphone" name="phone"><br>
 
     <label for="address">Адрес доставки:</label><br>
-    <textarea id="address" name="address"></textarea><br>
+    <textarea id="address" name="useraddress"></textarea><br>
 
     <label for="payment-method">Способ оплаты:</label><br>
     <select id ="payment-method" name ="payment-method">
@@ -95,10 +95,22 @@
 <script>
 let tg = window.Telegram.WebApp;
 
+
 let doc = document.getElementById("But")
 
 doc.addEventListener("click", ()=> {
-    document.querySelector("#But").style.display="none";
+let name=document.getElementById("username").value;
+let email=document.getElementById("useremail").value;
+let phone=document.getElementById("userphone").value;
+let adress=document.getElementById("useradress").value;
+
+let data = {
+    name: name,
+    email: email,
+    phone: phone,
+    adress: adress 
+}
+tg.sendData(JSON.stringify(data));
 })
 </script>
 
