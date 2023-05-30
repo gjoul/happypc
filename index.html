@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: inset 0px -2px rgba(0,0,0,0.15);
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50; / Green /
+    border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align:center;
+        text-decoration:none;
+        display:inline-block;
+        font-size :16px;
+        margin-top :20px;
+        cursor:pointer;
+        border-radius :5px;
+
+    }
+    input[type="submit"]:hover{
+        background-color:#3e8e41
+    }
+
+    @media screen and (max-width :768px) {
+        form { width :90% ; }
+    }
+</style>
+
+<h1>Оформление заказа</h1>
+
+<form action="#" method="post">
+    <label for="name">Имя:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+
+    <label for="phone">Телефон:</label><br>
+    <input type="tel" id="phone" name="phone"><br>
+
+    <label for="address">Адрес доставки:</label><br>
+    <textarea id="address" name="address"></textarea><br>
+
+    <label for="payment-method">Способ оплаты:</label><br>
+    <select id ="payment-method" name ="payment-method">
+        <option value ="cash-on-delivery">Наличными при получении</option>
+        <option value ="credit-card">Кредитной картой онлайн</option>
+        <option value ="paypal">PayPal</option>
+    </select><br>
+
+    <input type ="submit" value ="Оформить заказ" id="But">
+</form>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+let tg = window.Telegram.WebApp;
+
+let doc = document.getElementById("But")
+
+doc.addEventListener("click", ()=> {
+    document.getElementById("But").style.display="none";
+})
+</script>
+
+
+
+
+
+</body>
+</html>
