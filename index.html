@@ -100,9 +100,10 @@ let doc = document.getElementById("But")
 
 doc.addEventListener("click", ()=> {
     let name = document.getElementById("name").value;
-
+    let email = document.getElementById("useremail").value;
     let data = {
-        name: name
+        namefa: name,
+        email: email
     }
     tg.sendData(JSON.stringify(data));
 
