@@ -73,13 +73,13 @@
     <input type="text" id="name" name="name"><br>
 
     <label for="email">Email:</label><br>
-    <input type="email" id="useremail" name="email"><br>
+    <input type="email" id="email" name="email"><br>
 
     <label for="phone">Телефон:</label><br>
-    <input type="tel" id="userphone" name="phone"><br>
+    <input type="tel" id="phone" name="phone"><br>
 
     <label for="address">Адрес доставки:</label><br>
-    <textarea id="address" name="useraddress"></textarea><br>
+    <textarea id="address" name="address"></textarea><br>
 
     <label for="payment-method">Способ оплаты:</label><br>
     <select id ="payment-method" name ="payment-method">
@@ -100,9 +100,9 @@ let doc = document.getElementById("But")
 
 doc.addEventListener("click", ()=> {
     let name = document.getElementById("name").value;
-    let email = document.getElementById("useremail").value;
-    let phone = document.getElementById("userphone").value;
-    let address = document.getElementById("useraddress").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
     let data = {
         namefa: name,
         email: email,
